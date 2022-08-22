@@ -3,12 +3,6 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import { trpc } from "../utils/trpc";
 
-type Message = {
-  id: string;
-  message: string;
-  author: string;
-};
-
 const Home: NextPage = () => {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
