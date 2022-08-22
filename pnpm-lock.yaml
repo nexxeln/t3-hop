@@ -1,6 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@onehop/client': ^1.3.7
+  '@onehop/js': ^1.2.9
+  '@onehop/react': ^1.3.7
   '@trpc/client': ^9.27.1
   '@trpc/next': ^9.27.1
   '@trpc/react': ^9.27.1
@@ -24,6 +27,9 @@ specifiers:
   zod: ^3.18.0
 
 dependencies:
+  '@onehop/client': 1.3.7
+  '@onehop/js': 1.2.9
+  '@onehop/react': 1.3.7_react@18.2.0
   '@trpc/client': 9.27.1_@trpc+server@9.27.1
   '@trpc/next': 9.27.1_aa6q2e47ql7edy5qtqb4sllqhe
   '@trpc/react': 9.27.1_lsv5lrloaktxua3ujwhxv56iee
@@ -247,6 +253,57 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@onehop/client/1.3.7:
+    resolution: {integrity: sha512-DdoQSr+D2Xns7G/itG1HfU3LnbG+ADa4a7C1fk2KKO5xCi4c/UjZGOxn4k1uPoQF0V5YPfEYbvg5jlyKs9zEKQ==}
+    dependencies:
+      '@onehop/js': 1.2.9
+      '@onehop/leap-edge-js': 1.0.3
+      hls.js: 1.2.1
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
+    dev: false
+
+  /@onehop/js/1.2.9:
+    resolution: {integrity: sha512-inP7/uS/VmcdNRUv9BPTA2hQtUe9nBiOvueE6qIrkiubVicaaonJUMx7o8q5UtxoFGp6ESxWaxmedwv44/3OGA==}
+    dependencies:
+      '@onehop/json-methods': 1.1.1
+      cross-fetch: 3.1.5
+      zod: 3.18.0
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@onehop/json-methods/1.1.1:
+    resolution: {integrity: sha512-M467VD11H/3U6lllxtQio5iVQLhMg6jYIGDb765OAyINGdGmkd+ZEvjR7xqZfc07z92wui+hfVOEEcIcGlxcIw==}
+    dev: false
+
+  /@onehop/leap-edge-js/1.0.3:
+    resolution: {integrity: sha512-okGjk8ejuu896j8440BRyqLjWcplSH6tcdJvnBnhOHL+IrF84AQOqs+qklojLLldlalnDgQJOPcqQWwos4dWYA==}
+    dependencies:
+      eventemitter3: 4.0.7
+      ws: 8.8.1
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
+
+  /@onehop/react/1.3.7_react@18.2.0:
+    resolution: {integrity: sha512-W7bIYBe5HhDcPxdC/5HT6s+6wnlD6wqEPyicqr6uvKjJD4GO6ERDfdJaZI+dBZOu9nTTlSmX9MM9TzL2AH6G6w==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      '@onehop/client': 1.3.7
+      '@onehop/js': 1.2.9
+      '@onehop/leap-edge-js': 1.0.3
+      react: 18.2.0
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
+    dev: false
 
   /@rushstack/eslint-patch/1.1.4:
     resolution: {integrity: sha512-LwzQKA4vzIct1zNZzBmRKI9QuNpLgTQMEjsQLf3BXuGYb3QPTP4Yjf6mkdX+X1mYttZ808QpOwAzZjv28kq7DA==}
@@ -732,6 +789,14 @@ packages:
     requiresBuild: true
     dev: true
 
+  /cross-fetch/3.1.5:
+    resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
+    dependencies:
+      node-fetch: 2.6.7
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
@@ -1199,6 +1264,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /eventemitter3/4.0.7:
+    resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
+    dev: false
+
   /fast-deep-equal/3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     dev: true
@@ -1406,6 +1475,10 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /hls.js/1.2.1:
+    resolution: {integrity: sha512-+m/5+ikSpmQQvb6FmVWZUZfzvTJMn/QVfiCGP1Oq9WW4RKrAvxlExkhhbcVGgGqLNPFk1kdFkVQur//wKu3JVw==}
+    dev: false
 
   /ignore/5.2.0:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
@@ -1741,6 +1814,18 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  /node-fetch/2.6.7:
+    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+    dependencies:
+      whatwg-url: 5.0.0
     dev: false
 
   /node-releases/2.0.6:
@@ -2297,6 +2382,10 @@ packages:
       is-number: 7.0.0
     dev: true
 
+  /tr46/0.0.3:
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+    dev: false
+
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
     dependencies:
@@ -2391,6 +2480,17 @@ packages:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
     dev: true
 
+  /webidl-conversions/3.0.1:
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+    dev: false
+
+  /whatwg-url/5.0.0:
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
+    dev: false
+
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
     dependencies:
@@ -2416,6 +2516,19 @@ packages:
 
   /wrappy/1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+
+  /ws/8.8.1:
+    resolution: {integrity: sha512-bGy2JzvzkPowEJV++hF07hAD6niYSr0JzBNo/J29WsB57A2r7Wlc1UFcTR9IzrPvuNVO4B8LGqF8qcpsVOhJCA==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: false
 
   /xtend/4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}

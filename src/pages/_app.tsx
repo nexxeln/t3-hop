@@ -4,8 +4,19 @@ import type { AppRouter } from "../server/router";
 import type { AppType } from "next/dist/shared/lib/utils";
 import superjson from "superjson";
 import "../styles/globals.css";
+import { useEffect } from "react";
+import { hop } from "@onehop/client";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  useEffect(() => {
+    if (typeof window === undefined) {
+      return;
+    }
+
+    hop.init({
+      projectId: process.env.NEXT_PUBLIC_HOP_PROJECT_ID as string,
+    });
+  });
   return <Component {...pageProps} />;
 };
 
